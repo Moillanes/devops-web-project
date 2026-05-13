@@ -30,7 +30,7 @@ pipeline {
 
         stage('build image') {
             steps {
-                sh 'docker build -t Moillanes/devops-web-project:v1 --label devops-web-project-server .'
+                sh 'docker build -t moillanes98/devops-web-project:v1 --label devops-web-project-server .'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
 
         stage('Push to Docker Hub') {
             steps {
-                sh 'docker push Moillanes/devops-web-project:v1'
+                sh 'docker push moillanes98/devops-web-project:v1'
             }
         }
     }
